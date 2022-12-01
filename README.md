@@ -3,7 +3,7 @@
 This project is the Unix style of coroutine mechanism in C language.
 It uses the file descriptor number to control the coroutine system and the job function.
 
-LAB1(LIFO scheduling)
+LAB1 (LIFO scheduling)
 ---
 Design a new scheduling algorithm:
 Using the characteristics of the stack to implement LIFO scheduling.
