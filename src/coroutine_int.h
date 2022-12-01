@@ -1,7 +1,6 @@
 #ifndef __COROUTINE_INT_H__
 #define __COROUTINE_INT_H__
 
-#include "rbtree.h"
 #include "context.h"
 
 typedef int (*job_t)(struct context *__context, void *args);
@@ -17,12 +16,6 @@ struct task_struct {
     void *args;
     struct context context; /* defined at context.h */
 
-    /* default info */
-    struct {
-        struct rb_node node;
-        long sum_exec_runtime;
-        long exec_start;
-    };
 };
 
 #ifndef container_of
@@ -41,7 +34,7 @@ struct task_struct {
 #define RINGBUFFER_SIZE 16
 
 struct rq {
-    unsigned int out, in; /* dequeue at out, enqueue  at in*/
+    unsigned int top; /*stack top*/
     unsigned int mask; /* the size is power of two, so mask will be size - 1 */
     struct task_struct *r[RINGBUFFER_SIZE];
 };
@@ -62,7 +55,6 @@ struct cr {
 
     /* scheduler - chose by the flags */
     struct rq rq; /* FIFO */
-    struct rb_root root; /* Default */
 
     /* sched operations */
     int (*schedule)(struct cr *cr, job_t func, void *args);
