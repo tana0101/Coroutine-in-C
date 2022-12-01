@@ -38,10 +38,9 @@ struct context {
 
 /* The flags for deciding the scheduler of coroutine 
  */
-#define CR_DEFAULT 0x0001
-#define CR_LIFO 0x0002
+#define CR_LIFO 0x0001
 
-#define CR_SCHED_MASK (CR_DEFAULT | CR_LIFO)
+#define CR_SCHED_MASK (CR_LIFO)
 
 /**
  * coroutine_create - Create the coroutine

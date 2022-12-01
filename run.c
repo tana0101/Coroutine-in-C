@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    struct task_struct task[30];
+    struct task_struct task[16];
     struct rq rq;
     struct task_struct *tmp;
 
