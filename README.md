@@ -8,6 +8,8 @@ LAB1 (LIFO scheduling)
 Design a new scheduling algorithm:
 Using the characteristics of the stack to implement LIFO scheduling.
 
+<img src="https://github.com/tana0101/Coroutine-in-C/blob/main/img/finsh.png?raw=true">
+
 Building
 ---
 To build the static library `coroutine.a`:
