@@ -9,7 +9,7 @@ Design a new scheduling algorithm:
 Using the characteristics of the stack to implement LIFO scheduling.
 
 <img src="https://github.com/tana0101/Coroutine-in-C/blob/main/img/finsh.png?raw=true">
-<img src="hhttps://github.com/tana0101/Coroutine-in-C/blob/main/img/test_continue.png?raw=true">
+<img src="https://github.com/tana0101/Coroutine-in-C/blob/main/img/test_coroutine.png?raw=true">
 
 Building
 ---
